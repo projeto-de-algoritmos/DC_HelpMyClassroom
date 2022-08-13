@@ -1,63 +1,92 @@
-{% extends "navbar.html" %}
-{% load static %}
-{% block content_classroom %}
+{% extends "navbar.html" %} {% load static %} {% block content_classroom %}
 <style>
-body {
+  body {
     background: #00b09b;
     background: -webkit-linear-gradient(to right, #00b09b, #96c93d);
     background: linear-gradient(to right, #00b09b, #96c93d);
     min-height: 100vh;
   }
-  
+
   .text-gray {
     color: #aaa;
   }
 </style>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+/>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+/>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+/>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+/>
 
 <div class="container py-5">
-
-    <!-- For demo purpose -->
-    <div class="row text-center text-white mb-5">
-      <div class="col-lg-7 mx-auto">
-        <h1 class="display-4">Help My Classroom <img src="{% static 'images/student.png' %}" width="70" height="70" class="d-inline-block align-mid"></h1>
-        <p class="lead mb-0">Administre sua sala de aula com <b>estilo!</b></p>
-      </div>
+  <!-- For demo purpose -->
+  <div class="row text-center text-white mb-5">
+    <div class="col-lg-7 mx-auto">
+      <h1 class="display-4">
+        Help My Classroom
+        <img
+          src="{% static 'images/student.png' %}"
+          width="70"
+          height="70"
+          class="d-inline-block align-mid"
+        />
+      </h1>
+      <p class="lead mb-0">Administre sua sala de aula com <b>estilo!</b></p>
     </div>
-    <!-- End -->
-  
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-  
-        <!-- List group-->
-        <ul class="list-group shadow">
-            
-            {% for itens in students %}
+  </div>
+  <!-- End -->
 
-          <!-- list group item-->
-          <li class="list-group-item">
-            <!-- Custom content-->
-            <div class="media align-items-lg-center flex-column flex-lg-row p-3">
-              <div class="media-body order-2 order-lg-1">
-                <h5 class="mt-0 font-weight-bold mb-2">ID: {{itens.id}}</h5>
-                <p class="font-italic text-muted mb-0 small">{{itens.nome}}</p>
-                <div class="d-flex align-items-center justify-content-between mt-1">
-                  <h6 class="font-weight-bold my-2">{{itens.email}}</h6>
-                </div>
-              </div><img src="https:{{itens.foto}}" alt="Generic placeholder image" width="65" class="rounded-circle ml-lg-5 order-1 order-lg-2">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="flex-row-reverse">
+        <a class="btn btn-outline-dark mb-3" href="#" role="button">ID</a>
+        <a class="btn btn-outline-dark mb-3" href="#" role="button">Nome</a>
+        <a class="btn btn-outline-dark mb-3" href="#" role="button">Email</a>
+      </div>
+      <!-- List group-->
+      <ul class="list-group shadow">
+        {% for itens in students %}
+
+        <!-- list group item-->
+        <li class="list-group-item">
+          <!-- Custom content-->
+          <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+            <div class="media-body order-2 order-lg-1">
+              <h5 class="mt-0 font-weight-bold mb-2">ID: {{itens.id}}</h5>
+              <p class="font-italic text-muted mb-0 small">{{itens.nome}}</p>
+              <div
+                class="d-flex align-items-center justify-content-between mt-1"
+              >
+                <h6 class="font-weight-bold my-2">{{itens.email}}</h6>
+              </div>
             </div>
-            <!-- End -->
-          </li>
+            <img
+              src="https:{{itens.foto}}"
+              alt="Generic placeholder image"
+              width="65"
+              class="rounded-circle ml-lg-5 order-1 order-lg-2"
+            />
+          </div>
           <!-- End -->
-          
-          {% endfor %}
-{% endblock content_classroom %}      
-          
+        </li>
+        <!-- End -->
+
+        {% endfor %} {% endblock content_classroom %}
+      </ul>
+    </div>
+  </div>
+</div>
