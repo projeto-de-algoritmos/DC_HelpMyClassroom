@@ -49,7 +49,7 @@ def getRooms(idRoom):
         if 'students' in results:
             for x in results['students']:
                 try:
-                    studentsFormated.append({'id': x['userId'],'email': x['profile']['emailAddress'], 'nome': x['profile']['name']['fullName'], 'foto':x['profile']['photoUrl']})
+                    studentsFormated.append({'id': int(x['userId']),'email': x['profile']['emailAddress'], 'nome': x['profile']['name']['fullName'], 'foto':x['profile']['photoUrl']})
                 except Exception:
                     continue
 
