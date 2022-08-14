@@ -65,6 +65,31 @@
                 </div>
               </div>
               <img src="https:{{itens.foto}}" alt="Generic placeholder image" width="65" class="rounded-circle ml-lg-5 order-1 order-lg-2">
+
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="flex-row-reverse">
+        <a class="btn btn-outline-dark mb-3" href="#" role="button">ID</a>
+        <a class="btn btn-outline-dark mb-3" href="#" role="button">Nome</a>
+        <a class="btn btn-outline-dark mb-3" href="#" role="button">Email</a>
+      </div>
+      <!-- List group-->
+      <ul class="list-group shadow">
+        {% for itens in students %}
+
+        <!-- list group item-->
+        <li class="list-group-item">
+          <!-- Custom content-->
+          <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+            <div class="media-body order-2 order-lg-1">
+              <h5 class="mt-0 font-weight-bold mb-2">ID: {{itens.id}}</h5>
+              <p class="font-italic text-muted mb-0 small">{{itens.nome}}</p>
+              <div
+                class="d-flex align-items-center justify-content-between mt-1"
+              >
+                <h6 class="font-weight-bold my-2">{{itens.email}}</h6>
+              </div>
+
             </div>
             <img
               src="https:{{itens.foto}}"
