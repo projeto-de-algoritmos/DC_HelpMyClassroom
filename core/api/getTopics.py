@@ -9,30 +9,26 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 SCOPES = [
-    'https://www.googleapis.com/auth/classroom.coursework.students.readonly',
-    'https://www.googleapis.com/auth/classroom.coursework.me.readonly',
-    'https://www.googleapis.com/auth/classroom.coursework.students',
-    'https://www.googleapis.com/auth/classroom.coursework.me'
+    'https://www.googleapis.com/auth/classroom.topics.readonly'
 ]
 
 
-def getRooms(idRoom):
+def getTopicos(idRoom):
    
     creds = None
     try:
-        if os.path.exists('token.json'):
-            creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+        if os.path.exists('core/api/tokentopicos.json'):
+            creds = Credentials.from_authorized_user_file('core/api/tokentopicos.json', SCOPES)
         if not creds or not creds.valid:
             if creds and creds.expired and creds.refresh_token:
                 creds.refresh(Request())
             else:
                 flow = InstalledAppFlow.from_client_secrets_file(
-                    'certificados/classroom/testes.json', SCOPES)
+                    'core/api/cred.json', SCOPES)
                 creds = flow.run_local_server(port=0)
-                print(creds)
             # Save the credentials for the next run
             try:
-                with open('token.json', 'w') as token:
+                with open('core/api/tokentopicos.json', 'w') as token:
                     token.write(creds.to_json())
             except Exception as error:
                 print(error)       
@@ -44,12 +40,14 @@ def getRooms(idRoom):
         service = build('classroom', 'v1', credentials=creds)
         studentsFormated = []
         # Call the Classroom API
-        results = service.courses().courseWork().list(courseId = idRoom).execute()
-        print(results)
+        results = service.courses().topics().list(courseId = idRoom).execute()
+        courses = results.get('topic', [])
+        
+        return courses
 
     except Exception as error:
         print(error)    
     
         
 if __name__ == '__main__':
-    getRooms('525987525315')
+    getTopics('525987525315')

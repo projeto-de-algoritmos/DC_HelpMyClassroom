@@ -7,7 +7,7 @@
 
 <div class="container">
 <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{% url 'home' %}">
       <img src="{% static 'images/student.png' %}" width="30" height="30" class="d-inline-block align-top">
       Help My Classroom
     </a>
@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Alunos <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{% url 'home' %}">Alunos <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Professores</a>
@@ -28,8 +28,8 @@
             Atividades
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Mural</a>
-            <a class="dropdown-item" href="#">Tópicos</a>
+            <a class="dropdown-item" href="{% url 'getMural' %}">Mural</a>
+            <a class="dropdown-item" href="{% url 'getTopicos' %}">Tópicos</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Avisos</a>
           </div>
@@ -45,3 +45,11 @@
   {% block content_classroom %}
                                     
 {% endblock content_classroom %}
+
+{% block content_topicos %}
+                                    
+{% endblock content_topicos %}
+
+{% block content_mural %}
+
+{% endblock content_mural %}
