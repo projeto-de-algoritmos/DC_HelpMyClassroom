@@ -7,11 +7,18 @@ from core.api.getMural import getMural
 # Create your views here.
 
 def home_view(request):
-    print('entrou')
+
+    filter = request.GET.get('filter')
     students = getRooms('525987525315')
-    # mergeSort(students, 0, len(students)-1, 'email')
-    
-    print(students)
+
+    if filter == 'nome':
+        mergeSort(students, 0, len(students)-1, 'nome')
+    elif filter == 'id':
+        mergeSort(students, 0, len(students)-1, 'id')
+    elif filter == 'email':
+        mergeSort(students, 0, len(students)-1, 'email')    
+    else:
+        print(students)
     return render(request, 'home.html',{'students':students})
 
 def viewgetTopicos(request):
@@ -24,4 +31,4 @@ def viewgetMural(request):
     print('mural')
     mural = getMural('525987525315')
 
-    return render(request,'mural.html',{'mural':mural})        
+    return render(request,'mural.html',{'mural':mural})
