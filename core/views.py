@@ -22,15 +22,27 @@ def home_view(request):
     return render(request, 'home.html',{'students':students})
 
 def viewgetTopicos(request):
+    search = request.GET.get('search')
+    print(search)
     filtertopicos = request.GET.get('filtertopicos')
     topicos = getTopicos('525987525315')
-
-    if filtertopicos == 'text':
-        mergeSort(topicos, 0, len(topicos)-1, 'name')
-    elif filtertopicos == 'id':
-        mergeSort(topicos, 0, len(topicos)-1, 'topicId') 
+    
+    if search:
+        mergeSort(topicos, 0, len(topicos)-1, 'topicId')
+        result = binary_search(topicos, search, 'topicId')
+        topicos = [(topicos[result])]
+    
     else:
-        print('entrou')
+        
+        filtertopicos = request.GET.get('filtertopicos')
+        topicos = getTopicos('525987525315')
+
+        if filtertopicos == 'text':
+            mergeSort(topicos, 0, len(topicos)-1, 'name')
+        elif filtertopicos == 'id':
+            mergeSort(topicos, 0, len(topicos)-1, 'topicId') 
+        else:
+            print('entrou')
 
     return render(request,'topics.html',{'topicos':topicos})
 

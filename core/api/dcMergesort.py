@@ -1,9 +1,3 @@
-# arr = [{'aluno': 'Mateus', 'Nota': 10, 'Faltas': 0}, {'aluno': 'Nathália', 'Nota': 5, 'Faltas': 3}, {'aluno': 'Daniel', 'Nota': 8, 'Faltas': 1}, {'aluno': 'Alexandre', 'Nota': 4, 'Faltas': 6}, {'aluno': 'Igor', 'Nota': 9, 'Faltas': 2}]
-
-
-# print(arr[1]['aluno'])
-
-
 def merge(arr, l, m, r, key):
     n1 = m - l + 1
     n2 = r - m
@@ -64,6 +58,26 @@ def mergeSort(arr, l, r, key):
         merge(arr, l, m, r, key)
 
 
-# mergeSort(arr, 0, len(arr)-1, 'Nota')
-
-# print(arr)
+def binary_search(arr, x, key):
+    low = 0
+    high = len(arr) - 1
+    mid = 0
+ 
+    while low <= high:
+ 
+        mid = (high + low) // 2
+ 
+        
+        if arr[mid][key] < x:
+            low = mid + 1
+ 
+        
+        elif arr[mid][key] > x:
+            high = mid - 1
+ 
+        
+        else:
+            return mid
+ 
+    
+    return -1

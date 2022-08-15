@@ -32,8 +32,8 @@
         </li>
       </ul>
       <form method="GET" class="form-inline my-2 my-lg-0" id="search-form">
-        <input class="form-control mr-sm-2" type="text" name="search" placeholder="Pesquisar" aria-label="Search">
-        <button id="search-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="{% static 'images/lupa.png' %}" width="24" height="24" class="d-inline-block align-top"> </button>
+        <input class="form-control mr-sm-2" type="text" name="search" placeholder="Pesquisar" value="{{ request.GET.search }}" aria-label="Search">
+        <button id="search-btn" class="btn btn-outline-success my-2 my-sm-0"><img src="{% static 'images/lupa.png' %}" width="24" height="24" class="d-inline-block align-top"> </button>
       </form>
     </div>
   </nav>
