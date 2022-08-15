@@ -15,12 +15,12 @@ Temas:
 | 19/0044390  |  Victor Rayan Adriano Ferreira |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+
+O projeto utiliza algoritmos de divisão e conquista. Utilizando a estratégia de dividir para conquistar realiza ordenação de dados vindo direto da API classroom, como tópicos, alunos e murais. Dessa forma, é um ínicio de uma automatização para ajudar os professores administrarem suas turmas.
+
+Algoritmos utilizados: MergeSort e Binary Search
 
 ## Screenshots
-
-Tela Inicial de alunos matriculados.
-![Tela Inicial Alunos matriculados](./imgs/homeAlunos.JPG)
 
 Tela Inicial do mural.
 
@@ -33,7 +33,7 @@ Tela Inicial com tópicos.
 
 ## Instalação 
 **Linguagem**:  Python 3<br>
-**Framework**: Django e Bootstrap5<br>
+**Framework**: Django e Bootstrap<br>
 
 Para rodar a aplicação é necessário ter instalado em sua máquina o python 3 e o Django.
 
@@ -59,11 +59,14 @@ $ python3 manage.py runserver
 ```
 
 ### Acessar a url: 
-http://127.0.0.1:8000/home/
+http://127.0.0.1:8000/
 
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+1- Escolha um dos dados que deseja visualizar.
+2- Abra o filtro e Ordene por Id, Nome, Texto, Data etc..(MergeSort) ou Utilize FindBox e pesquise por algo mais específico(BinarySearch)
+3- Exporte os dados como pdf ou para uma planilha
+
 
 
 
