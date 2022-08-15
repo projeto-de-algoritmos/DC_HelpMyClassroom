@@ -28,7 +28,17 @@ def viewgetTopicos(request):
     return render(request,'topics.html',{'topicos':topicos})
 
 def viewgetMural(request):
-    print('mural')
+    
+    filtermural = request.GET.get('filtermural')
+    print(filtermural)
     mural = getMural('525987525315')
-
+    
+    if filtermural == 'text':
+        mergeSort(mural, 0, len(mural)-1, 'text')
+    elif filtermural == 'id':
+        mergeSort(mural, 0, len(mural)-1, 'id') 
+    else:
+        # print(mural)
+        print('entrou')
+    
     return render(request,'mural.html',{'mural':mural})

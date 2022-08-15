@@ -21,9 +21,6 @@
         <li class="nav-item active">
           <a class="nav-link" href="{% url 'home' %}">Alunos <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Professores</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Atividades
@@ -31,8 +28,6 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="{% url 'getMural' %}">Mural</a>
             <a class="dropdown-item" href="{% url 'getTopicos' %}">Tópicos</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Avisos</a>
           </div>
         </li>
       </ul>
@@ -62,16 +57,24 @@
     var searchBtn = $('#search-btn');
     var searchForm = $('#search-form');
     var baseUrl = 'http://127.0.0.1:8000/';
+    var baseMural = 'http://127.0.0.1:8000/classroom/mural/'
     var filter = $('#filter');
+    var filtermural = $('#filtermural');
 
     $(searchBtn).on('click', function(){
       searchForm.submit();
-    })
+    });
 
     $(filter).change(function(){
       var filter = $(this).val();
       window.location.href = baseUrl + '?filter=' + filter;
-    })
+    });
+
+    $(filtermural).change(function(){
+      var filtermural = $(this).val();
+      window.location.href = baseMural + '?filtermural=' + filtermural;
+      console.log(filtermural)
+    });
 
 
   });
