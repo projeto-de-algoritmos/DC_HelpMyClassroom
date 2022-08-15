@@ -22,15 +22,21 @@ def home_view(request):
     return render(request, 'home.html',{'students':students})
 
 def viewgetTopicos(request):
-    print('topicos')
+    filtertopicos = request.GET.get('filtertopicos')
     topicos = getTopicos('525987525315')
+
+    if filtertopicos == 'text':
+        mergeSort(topicos, 0, len(topicos)-1, 'name')
+    elif filtertopicos == 'id':
+        mergeSort(topicos, 0, len(topicos)-1, 'topicId') 
+    else:
+        print('entrou')
 
     return render(request,'topics.html',{'topicos':topicos})
 
 def viewgetMural(request):
     
     filtermural = request.GET.get('filtermural')
-    print(filtermural)
     mural = getMural('525987525315')
     
     if filtermural == 'text':
@@ -38,7 +44,6 @@ def viewgetMural(request):
     elif filtermural == 'id':
         mergeSort(mural, 0, len(mural)-1, 'id') 
     else:
-        # print(mural)
         print('entrou')
     
     return render(request,'mural.html',{'mural':mural})

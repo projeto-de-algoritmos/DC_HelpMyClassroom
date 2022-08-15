@@ -58,8 +58,10 @@
     var searchForm = $('#search-form');
     var baseUrl = 'http://127.0.0.1:8000/';
     var baseMural = 'http://127.0.0.1:8000/classroom/mural/'
+    var basetopicos = 'http://127.0.0.1:8000/classroom/'
     var filter = $('#filter');
     var filtermural = $('#filtermural');
+    var filtertopicos = $('#filtertopicos');
 
     $(searchBtn).on('click', function(){
       searchForm.submit();
@@ -68,6 +70,12 @@
     $(filter).change(function(){
       var filter = $(this).val();
       window.location.href = baseUrl + '?filter=' + filter;
+    });
+
+    $(filtertopicos).change(function(){
+      var filtertopicos = $(this).val();
+      window.location.href = basetopicos + '?filtertopicos=' + filtertopicos;
+      console.log(filtertopicos)
     });
 
     $(filtermural).change(function(){
