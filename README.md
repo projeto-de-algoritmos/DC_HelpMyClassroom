@@ -82,7 +82,7 @@ http://127.0.0.1:8000/
 3. Exporte os dados como pdf ou para uma planilha
 
 ## Outros
-Ao rodar caso tenha problemas com as credenciais entre em contato com: @mateus_lm <img align="center" alt="c" height="23" width="23" src="https://devicons.railway.app/i/telegram.svg">
+Ao rodar, caso tenha problemas com as credenciais do google entre em contato com: @mateus_lm <img align="center" alt="c" height="23" width="23" src="https://devicons.railway.app/i/telegram.svg">
 
 
 
