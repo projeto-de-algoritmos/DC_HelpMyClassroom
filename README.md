@@ -34,7 +34,7 @@ Tela Inicial com tópicos.
 
 Opções para filtrar com MergeSort.
 
-![Opções para filtrar com MergeSort](./imgs/filtrarPorMergeSort.JPG)
+![Opções para filtrar com MergeSort](./imgs/filtrarPorMergeSort.jpg)
 
 MergeSort Ordenando Mural por ID.
 

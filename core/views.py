@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from core.api.getListStudents import getRooms
-from core.api.dcMergesort import *
+from core.api.divideConquiste import *
 from core.api.getTopics import getTopicos
 from core.api.getMural import getMural
 
