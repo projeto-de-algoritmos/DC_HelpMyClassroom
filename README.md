@@ -86,7 +86,7 @@ Ao rodar, caso tenha problemas com as credenciais do google entre em contato com
 
 ## Apresentação
 
-[Video Apresentação](apresentacao\dc-classroom.mp4)
+[Video Apresentação](apresentacao/dc-classroom.mp4)
 
 
 
