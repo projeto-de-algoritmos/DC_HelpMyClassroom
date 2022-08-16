@@ -16,9 +16,9 @@ Temas:
 
 ## Sobre 
 
-O projeto utiliza algoritmos de divisão e conquista. Utilizando a estratégia de dividir para conquistar realiza ordenação de dados vindo direto da API classroom, como tópicos, alunos e murais. Dessa forma, é um ínicio de uma automatização para ajudar os professores administrarem suas turmas.
+O projeto utiliza algoritmos de divisão e conquista. Utilizando a estratégia de dividir para conquistar realiza ordenação de dados vindo direto da API classroom do Google. Ordena dados como tópicos, alunos e murais. Dessa forma, o projeto é um ínicio de uma automatização para ajudar os professores administrarem suas turmas.
 
-Algoritmos utilizados: MergeSort e Binary Search
+Algoritmos utilizados: MergeSort e Binary Search (Não foi abordado diretamente nas aulas, mas segue o paradigma do tópico, dividir para conquistar).
 
 ## Screenshots
 
@@ -26,9 +26,23 @@ Tela Inicial do mural.
 
 ![Tela Inicial do mural](./imgs/homeMural.JPG)
 
+
 Tela Inicial com tópicos.
 
 ![Tela Inicial com tópicos](./imgs/homeTopicos.JPG)
+
+
+Opções para filtrar com MergeSort.
+
+![Opções para filtrar com MergeSort](./imgs/filtrarPorMergeSort.JPG)
+
+MergeSort Ordenando Mural por ID.
+
+![MergeSort Ordenando Mural por ID](./imgs/mergeSortOdernandoMuralByID.JPG)
+
+Busca Binária procurando em tópico por ID exato.
+
+![Busca Binária procurando em tópico por ID](./imgs/buscaBinaria.JPG)
 
 
 ## Instalação 
@@ -63,9 +77,12 @@ http://127.0.0.1:8000/
 
 
 ## Uso 
-1- Escolha um dos dados que deseja visualizar.
-2- Abra o filtro e Ordene por Id, Nome, Texto, Data etc..(MergeSort) ou Utilize FindBox e pesquise por algo mais específico(BinarySearch)
-3- Exporte os dados como pdf ou para uma planilha
+1. Escolha um dos dados que deseja visualizar.
+2. Abra o filtro e Ordene por Id, Nome, Texto, Data etc..(MergeSort) ou Utilize FindBox e pesquise por algo mais específico(BinarySearch)
+3. Exporte os dados como pdf ou para uma planilha
+
+## Outros
+Ao rodar caso tenha problemas com as credenciais entre em contato com: @mateus_lm <img align="center" alt="c" height="23" width="23" src="https://devicons.railway.app/i/telegram.svg">
 
 
 
