@@ -79,7 +79,7 @@ http://127.0.0.1:8000/
 ## Uso 
 1. Escolha um dos dados que deseja visualizar.
 2. Abra o filtro e Ordene por Id, Nome, Texto, Data etc..(MergeSort) ou Utilize FindBox e pesquise por algo mais específico(BinarySearch)
-3. Exporte os dados como pdf ou para uma planilha
+3. Utilize os dados ordenados para exportar como pdf ou para uma planilha por exemplo. =)
 
 ## Outros
 Ao rodar, caso tenha problemas com as credenciais do google entre em contato com: @mateus_lm <img align="center" alt="c" height="23" width="23" src="https://devicons.railway.app/i/telegram.svg">
